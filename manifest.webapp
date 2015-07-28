@@ -1,0 +1,14 @@
+{
+  "name": "Theme Color Test",
+  "description": "Simple hosted app to test theme color",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/icons/icon.png"
+  },
+  "developer": {
+    "name": "Michael Henretty",
+    "url": "https://github.com/mikehenrty"
+  },
+  "default_locale": "en",
+  "type": "web"
+}
