@@ -6,6 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="red">
 </head>
+  <button id="install">Install</button>
 <body>
+<script>
+  var button = document.getElementById('install');
+  button.onclick = function() {
+    var mozApps = window.navigator.mozApps;
+    if (!mozApps) {
+      alert('Error, you cannot install Firefox OS apps onto this platform');
+    } else {
+      var url = 'https://mikehenrty.github.io/theme-color-test/manifest.webapp';
+      var r = mozApps.install(url);
+      r.onsuccess = function() {
+        alert('Installed!');
+        window.close();
+      };
+      r.onerror = function(e) {
+        alert('Error, unable to install app:' + e);
+      };
+    }
+  };
 </body>
 </html>
